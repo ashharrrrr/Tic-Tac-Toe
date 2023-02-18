@@ -1,14 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic-Tac-Toe</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="player-selection show">
+      <div class="selection-panel">
+        <div class="modal-row-1">
+          <div class="player-one">
+            <h4 class="player-heading">Player 1</h4>
+            <button class="btn-x selection-btn-grp1 player-btn">X</button>
+            <button class="btn-o selection-btn-grp1 player-btn">O</button>
+          </div>
+          <div class="vs-div">VS</div>
+          <div class="player-two">
+            <h4 class="player-heading">Player 2</h4>
+            <button class="player-btn selection-btn-grp2 btn-human">
+              Human
+            </button>
+            <button class="player-btn selection-btn-grp2 btn-computer">
+              Computer
+            </button>
+          </div>
+        </div>
+        <div class="start-game">
+          <button class="start-button">Start</button>
+        </div>
+      </div>
+    </div>
+    <div class="outer-game-board">
+      <div class="game-board">
+        <div class="row-1">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+        <div class="row-2">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+        <div class="row-3">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+      </div>
+    </div>
+    <div class="game-end-modal">
+      <div class="inner-game-end-modal">
+        <p class="winner"></p>
+        <button class="restart">Restart</button>
+      </div>
+    </div>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>

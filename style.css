@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap");
+
+body {
+  font-family: "IBM Plex Mono";
+  color: white;
+  background-color: #15616d;
+  height: 100vh;  
+  margin: 0;
+  padding: 0;
+}
+
+.outer-game-board {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.row-1,
+.row-2,
+.row-3 {
+  display: flex;
+}
+.row-1,
+.row-2{
+  border-bottom: 5px solid white;
+}
+
+.row-1 > .cell,
+.row-2 > .cell,
+.row-3 > .cell
+{
+  border-right: 5px solid white;
+}
+
+
+.row-1 > .cell:last-child,
+.row-2 > .cell:last-child,
+.row-3 > .cell:last-child{
+  border-right: none;
+}
+
+.cell {
+  
+  color: white;
+  font-size: 96px;
+  font-weight: 700;
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.player-selection {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.selection-panel {
+  width: 50%;
+  height: 50%;
+  background-color: #001524;
+}
+
+.modal-row-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  gap: 5rem;
+}
+
+.player-heading {
+  font-size: 32px;
+}
+
+.vs-div {
+  font-size: 24px;
+}
+
+.player-one,
+.player-two {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.player-btn {
+  padding: 15px 25px;
+  font-weight: 400;
+  font-size: 22px;
+  border-radius: 10px;
+  border: none;
+}
+
+.focused-btn {
+  font-weight: 600;
+  background-color: #ffecd1;
+  font-size: 26px;
+}
+
+.player-btn:hover,
+.btn-human:focus {
+  font-weight: 600;
+  background-color: #ffecd1;
+  font-size: 26px;
+}
+
+.btn-computer:hover,
+.btn-computer:focus {
+  font-size: 22px;
+  color: white;
+  background-color: #e71d36;
+}
+
+.start-game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+}
+
+.start-button {
+  font-size: 22px;
+  padding: 0.6rem 10rem;
+  border-radius: 10px;
+}
+
+.start-button:hover {
+  background-color: #2c6e49;
+  color: white;
+  font-size: 26px;
+  border: none;
+}
+
+.game-end-modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #001524;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-game-end-modal{
+  height: 25%;
+  width: 100%;
+  border: 5px solid black;
+  background-color: #2c6e49;
+}
+
+.show {
+  display: flex;
+}
